@@ -165,7 +165,7 @@ func (p *Parser) GenerateJSON() string {
 				emojis = append(emojis, emoji.Symbol)
 			}
 		}
-		preJSON[structure[gr.Name]] = emojis
+		preJSON[structure[gr.Name]] = append(preJSON[structure[gr.Name]], emojis...)
 	}
 
 	// Generate ordered JSON
